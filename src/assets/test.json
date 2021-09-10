@@ -1,0 +1,55 @@
+{
+  "httpStatus": "OK",
+  "statusCode": "APP001",
+  "statusDesc": "Your request has been processed successfully",
+  "transactionId": "1234",
+  "displayMsg": "Your request has been processed successfully",
+  "ncfMeeting": {
+    "meetingId": "iFN6CB40TcTe",
+    "stateId": 35,
+    "title": "Test Meet 6",
+    "description": "VGVzdCBEZXNj",
+    "meetLink": "",
+    "meetLocation": "Ghaziabad",
+    "startTime": "2021-08-18 07:53:09",
+    "endTime": "2021-08-18 07:53:09",
+    "status": 1,
+    "creatorId": 1,
+    "createdDate": "2021-08-18 13:23:10",
+    "ncfMeetMembers": [{
+      "meetmemId": "NrPJ98BjA3My",
+      "stateId": 35,
+      "meetingId": "iFN6CB40TcTe",
+      "memberId": 1,
+      "attendance": false,
+      "groupId": 1,
+      "membrType": 1,
+      "status": 1
+    }, {
+      "meetmemId": "66701ZHkVfOm",
+      "stateId": 35,
+      "meetingId": "iFN6CB40TcTe",
+      "memberId": 2,
+      "attendance": false,
+      "groupId": 1,
+      "membrType": 1,
+      "status": 1
+    }],
+    "fileUploads": [{
+      "fileUploadKey": {
+        "fileUpldId": "3",
+        "stateId": 3
+      },
+      "moduleType": "Meeting",
+      "sectionType": "SUPPORTING_DOC",
+      "contentType": "Image",
+      "fileParentId": "iFN6CB40TcTe",
+      "fileText1": "",
+      "filename": "TestUser_210810171823.png",
+      "fileText2": "",
+      "filesizeKb": 10,
+      "status": true,
+      "originalFilename": "TestUser.png"
+    }]
+  }
+}

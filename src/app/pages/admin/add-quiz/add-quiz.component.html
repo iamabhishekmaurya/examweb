@@ -1,0 +1,43 @@
+<mat-card>
+  <h1 class="text-center">Add Quiz</h1>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 offset-md-3">
+        <!-- {{quizzes | json}} -->
+        <form (ngSubmit)="saveQuiz()" action="#">
+          <mat-form-field class="full-width" appearance="outline">
+            <mat-label>Title</mat-label>
+            <input autofocus type="text" matInput placeholder="Enter here" name="title" [(ngModel)]="quizzes.title"
+              required>
+          </mat-form-field>
+          <mat-form-field class="full-width" appearance="outline">
+            <mat-label>Category</mat-label>
+            <mat-select [(ngModel)]="quizzes.catId" name="category" required>
+              <mat-option *ngFor="let catg of categories" [value]="catg.catId">
+                {{catg.title}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+          <mat-form-field class="full-width" appearance="outline">
+            <mat-label>Max Mark</mat-label>
+            <input type="number" matInput placeholder="Enter here" name="maxMark" [(ngModel)]="quizzes.maxMark"
+              required>
+          </mat-form-field>
+          <mat-form-field class="full-width" appearance="outline">
+            <mat-label>Number Of Question</mat-label>
+            <input type="number" matInput placeholder="Enter here" name="numberOfQuestion"
+              [(ngModel)]="quizzes.numberOfQuestion" required>
+          </mat-form-field>
+          <mat-form-field class="full-width" appearance="outline">
+            <mat-label>Description</mat-label>
+            <textarea type="text" rows="4" matInput placeholder="Enter here" name="description"
+              [(ngModel)]="quizzes.description"></textarea>
+          </mat-form-field>
+          <div class="container text-center">
+            <button type="submit" mat-raised-button color="primary">Add</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</mat-card>

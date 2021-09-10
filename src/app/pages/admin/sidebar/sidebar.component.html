@@ -1,0 +1,29 @@
+<mat-card>
+  <mat-action-list>
+    <div mat-sidebar>Menu</div>
+    <button mat-list-item [routerLink]="['/admin']" routerLinkActive="router-link-active">
+      <mat-icon mat-list-icon>home</mat-icon>
+      Home
+    </button>
+    <button mat-list-item [routerLink]="['/admin/profile']" routerLinkActive="router-link-active">
+      <mat-icon mat-list-icon>person</mat-icon>
+      Profile
+    </button>
+    <button mat-list-item [routerLink]="['/admin/category']" routerLinkActive="router-link-active">
+      <mat-icon mat-list-icon>list</mat-icon>
+      Categories
+    </button>
+    <button mat-list-item [routerLink]="['/admin/addcategory']" routerLinkActive="router-link-active">
+      <mat-icon mat-list-icon>add_circle_outline</mat-icon>
+      Add Categories
+    </button>
+    <button mat-list-item [routerLink]="['/admin/quizzes']" routerLinkActive="router-link-active">
+      <mat-icon mat-list-icon>quizz</mat-icon>
+      Quizzes
+    </button>
+    <button mat-list-item [routerLink]="['/admin/profile']" routerLinkActive="router-link-active">
+      <mat-icon mat-list-icon>post_add </mat-icon>
+      Add Quizz
+    </button>
+  </mat-action-list>
+</mat-card>

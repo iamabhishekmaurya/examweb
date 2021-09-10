@@ -1,0 +1,33 @@
+<mat-card>
+  <div mat-header>
+    <h1 class="space-between">Quizzes
+      <button mat-raised-button color="primary" [routerLink]="['/admin/addquiz']"
+        routerLinkActive="router-link-active">Add Quiz</button>
+    </h1>
+  </div>
+  <div *ngIf="quizzes">
+    <mat-accordion>
+      <mat-expansion-panel *ngFor="let quiz of quizzes" class="mt-2 card-bg" (opened)="panelOpenState = true"
+        (closed)="panelOpenState = false">
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            <h3>
+              {{quiz.title}}
+            </h3>
+          </mat-panel-title>
+          <mat-panel-description>
+            {{quiz.category.title}}
+          </mat-panel-description>
+        </mat-expansion-panel-header>
+        <p>{{quiz.description}}</p>
+        <mat-divider></mat-divider>
+        <div class="space-between mt-3">
+          <p class="sub-text">Number of Question: {{quiz.numberOfQuestion}}</p>
+          <p class="sub-text">Total Mark: {{quiz.maxMark}}</p>
+          <button mat-raised-button color="accent">Take Quiz</button>
+        </div>
+      </mat-expansion-panel>
+    </mat-accordion>
+  </div>
+
+</mat-card>

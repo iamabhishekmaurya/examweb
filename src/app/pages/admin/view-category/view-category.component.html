@@ -1,0 +1,25 @@
+<mat-card>
+  <mat-list>
+    <div mat-header>
+      <h1 class="space-between">All Categories
+        <button mat-raised-button color="primary" [routerLink]="['/admin/addcategory']"
+          routerLinkActive="router-link-active">Add New Category</button>
+      </h1>
+    </div>
+    <mat-divider></mat-divider>
+    <mat-list-item *ngFor="let item of categoryList">
+      <mat-divider></mat-divider>
+      <mat-icon mat-list-icon>category</mat-icon>
+      <div mat-line>{{item.title}}</div>
+      <div mat-line>{{item.description}}</div>
+      <button (click)="catAction(item.catId)" mat-icon-button *ngIf="item.status" class="red"
+        matTooltip="Diactivate Category" matTooltipClass="red" matTooltipPosition="left">
+        <mat-icon mat-list-icon>delete</mat-icon>
+      </button>
+      <button (click)="catAction(item.catId)" mat-icon-button *ngIf="!item.status" class="green"
+        matTooltip="Activate Category" matTooltipClass="green" matTooltipPosition="left">
+        <mat-icon mat-list-icon>check_box</mat-icon>
+      </button>
+    </mat-list-item>
+  </mat-list>
+</mat-card>
